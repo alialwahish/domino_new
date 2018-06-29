@@ -1,0 +1,51 @@
+
+        <div class="wrapper">
+    
+            <div class="title-bar">
+                <img src="/assets/img/logo.png" width="350px">
+                <div class="navigation">
+                    <button type="button" class="btn btn-secondary"   [routerLink]="['/register']">Register</button>
+                    <!-- <button type="button" class="btn btn-secondary">Leaderboard</button> -->
+                    <br>
+                    <br>
+                </div>
+            </div>
+    
+            <div class="login-reg">
+                <h3>Log In</h3>
+    
+                <br>
+                <form name='loginForm' #loginForm='ngForm' method='post' (submit)="login(loginForm)">
+    
+                <table style="width: 110%;">
+
+                  <tr>
+
+                        <td>Username</td>
+                        <td><input type='text' name='email'  
+                          [(ngModel)]='loginUser.email'
+                          #email="ngModel"
+                          required
+                          minlength="3"></td>
+                    </tr>
+    
+                        <tr>
+                            <td>Password</td>
+                            <td><input type='password' name='password'
+                              [(ngModel)]='loginUser.password'
+                              #password='ngModel'
+                              required
+                              minlength="8"></td>
+                        </tr>
+    
+                </table>
+                <br><br>
+                
+                <button [disabled]="!loginForm.valid" class="btn btn-secondary">Log In</button>
+                
+              </form>
+            </div>
+    
+    
+        </div>
+    

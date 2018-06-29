@@ -1,0 +1,48 @@
+    <div class="wrapper">
+
+        <div class="title-bar">
+            <img src="/assets/img/logo.png" width="350px">
+            <div class="navigation">
+                <h2>Welcome: {{currentUser.first_name}}</h2>
+                <button type="button" class="btn btn-secondary" (click)="createGame(currentUser)"  >Play Game</button>
+                <!-- <button type="button" class="btn btn-secondary" [routerLink]="['/board']">Leaderboard</button> -->
+                <button type="button" class="btn btn-danger" (click)="logOut()" >Log Out</button>
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <div class="table">
+            <h3>Game List</h3>
+
+            <table class="game-list">
+                <tr>
+                    <th>Game Name</th>
+                    <th>Created By</th>
+                    <th>Players</th>
+                    <th>Password?</th>
+                    <th>Join</th>
+                </tr>
+
+              
+                    <tr>
+                        <td>Best Game Ever!</td>
+                        <td>Nat</td>
+                        <td>1/2</td>
+                        <td>
+                            <i class="fas fa-lock-open"></i>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-secondary">Join Game</button>
+                        </td>
+                    </tr>
+              
+
+                
+            </table>
+
+        </div>
+
+
+    </div>
+

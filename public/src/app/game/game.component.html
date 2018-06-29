@@ -1,0 +1,98 @@
+
+
+
+
+<div class="wrapper">
+
+    <div class="title-bar">
+        <img src="/assets/img/logo.png" width="350px">
+        <div class="navigation">
+            <h2>Welcome: {{currentUser.first_name}}</h2>
+            <button type="button" class="btn btn-secondary" [routerLink]="['/dashBoard']">Leave Game</button>
+
+            <button type="button_" class="btn btn-danger" [routerLink]="['/home']">Log Out</button>
+            <br>
+            <br>
+        </div>
+    </div>
+
+    <div class="opponent-hand">
+        <div *ngFor="let n of opHand" class="domino vertical">
+
+            <i  class="fas fa-square fa-2x head"></i>
+            <i class="fas fa-square fa-2x tail"></i>
+        </div>
+       
+    </div>
+
+    
+
+    <div class="table"> 
+
+
+
+            <div *ngFor='let bone of table'  class="domino horizontal">
+                    <i *ngIf="bone['head'] == 0" class="fas fa-square fa-3x head"></i>
+                    <i  *ngIf="bone['head']== 1 "  class="fas fa-dice-one fa-3x head"></i>
+                    <i  *ngIf="bone['head']== 2 "  class="fas fa-dice-two fa-3x head"></i>
+                    <i  *ngIf="bone['head']== 3 "  class="fas fa-dice-three fa-3x head"></i>
+                    <i  *ngIf="bone['head']== 4 "  class="fas fa-dice-four fa-3x head"></i>
+                    <i  *ngIf="bone['head']== 5 "  class="fas fa-dice-five fa-3x head"></i>
+                    <i  *ngIf="bone['head']== 6 "  class="fas fa-dice-six fa-3x head"></i>
+                    
+                    <i  *ngIf="bone['tail'] == 0" class="fas fa-square fa-3x tail"></i>
+                    <i  *ngIf="bone['tail']== 1 "  class="fas fa-dice-one fa-3x tail"></i>
+                    <i  *ngIf="bone['tail']== 2 "  class="fas fa-dice-two fa-3x tail"></i>
+                    <i  *ngIf="bone['tail']== 3 "  class="fas fa-dice-three fa-3x tail"></i>
+                    <i  *ngIf="bone['tail']== 4 "  class="fas fa-dice-four fa-3x tail"></i>
+                    <i  *ngIf="bone['tail']== 5 "  class="fas fa-dice-five fa-3x tail"></i>
+                    <i  *ngIf="bone['tail']== 6 "  class="fas fa-dice-six fa-3x tail"></i>
+                    
+                    
+                </div>
+
+    </div>
+   
+   
+
+
+
+    <div  class="my-hand">
+        
+        <div *ngFor='let bone of hand'  class="domino vertical" (click)='playBone(bone)' >
+            <i *ngIf="bone['head'] == 0" class="fas fa-square fa-3x head"></i>
+            <i  *ngIf="bone['head']== 1 "  class="fas fa-dice-one fa-3x head"></i>
+            <i  *ngIf="bone['head']== 2 "  class="fas fa-dice-two fa-3x head"></i>
+            <i  *ngIf="bone['head']== 3 "  class="fas fa-dice-three fa-3x head"></i>
+            <i  *ngIf="bone['head']== 4 "  class="fas fa-dice-four fa-3x head"></i>
+            <i  *ngIf="bone['head']== 5 "  class="fas fa-dice-five fa-3x head"></i>
+            <i  *ngIf="bone['head']== 6 "  class="fas fa-dice-six fa-3x head"></i>
+            
+            <i  *ngIf="bone['tail'] == 0" class="fas fa-square fa-3x tail"></i>
+            <i  *ngIf="bone['tail']== 1 "  class="fas fa-dice-one fa-3x tail"></i>
+            <i  *ngIf="bone['tail']== 2 "  class="fas fa-dice-two fa-3x tail"></i>
+            <i  *ngIf="bone['tail']== 3 "  class="fas fa-dice-three fa-3x tail"></i>
+            <i  *ngIf="bone['tail']== 4 "  class="fas fa-dice-four fa-3x tail"></i>
+            <i  *ngIf="bone['tail']== 5 "  class="fas fa-dice-five fa-3x tail"></i>
+            <i  *ngIf="bone['tail']== 6 "  class="fas fa-dice-six fa-3x tail"></i>
+            
+            
+            
+            
+        </div>
+        
+        
+            <!-- <div class="chat-container">
+                <h4>Chat</h4>
+                <div class="chat-inner">
+                    <p>Player One: Hey!</p>
+                    <p>Player Two: What's up?</p>
+                    <p>Player One: Not much. But I'm going to beat you at dominos.</p>
+                    <p>Player Two: Woah! Not a chance. I am a master of this game.</p>
+                </div>
+            
+            
+            </div>
+             -->
+    </div>
+</div>

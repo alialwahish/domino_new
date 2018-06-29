@@ -1,0 +1,66 @@
+
+    <div class="wrapper">
+
+        <div class="title-bar">
+            <img src="/assets/img/logo.png" width="350px">
+            <div class="navigation">
+                <button type="button" class="btn btn-secondary"[routerLink]="['/login']" >Login</button>
+                <!-- <button type="button" class="btn btn-secondary">Leaderboard</button> -->
+                <br>
+                <br>
+            </div>
+        </div>
+
+        <div class="login-reg">
+            <h3>Registration</h3>
+
+            <br>
+            <form method='post' name="newUserForm" #newUserForm='ngForm' (submit)="signUp(newUserForm)">
+
+            <table style="width: 110%;">
+                <tr>
+                    <td>First Name</td>
+                    <td><input type='text' name='first_name'
+                        [(ngModel)]='createUser.first_name' 
+                        #first_name='ngModel'
+                        required
+                        minlength="3"></td>
+                </tr>
+                <tr>
+                        <td>Last Name</td>
+                        <td><input type='text' name='last_name'
+                            [(ngModel)]='createUser.last_name' 
+                            #last_name='ngModel'
+                            required
+                            minlength="3"></td>
+                    </tr>
+
+                    <tr>
+                        <td>Email</td>
+                        <td><input type='text' name='email'  
+                            [(ngModel)]='createUser.email'
+                            #email="ngModel"
+                            required
+                            minlength="3"></td>
+                    </tr>
+                    <tr>
+                            <td>Password</td>
+                            <td><input type='password' name='password'
+                                [(ngModel)]='createUser.password'
+                                #password='ngModel'
+                                required
+                                minlength="8"></td>
+                        </tr>
+
+                    
+
+            </table>
+            <br><br>
+
+            <button [disabled]="!newUserForm.valid"  class="btn btn-secondary">Register</button>
+        </form>
+        <br><br>
+        </div>
+
+
+    </div>

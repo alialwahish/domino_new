@@ -1,0 +1,27 @@
+{
+  "name": "newDomino",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.1.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "jquery": "^3.3.1",
+    "mongoose": "^5.1.6",
+    "rxjs": "^6.2.1",
+    "rxjs-compat": "^6.2.1",
+    "socket.io": "2.1.1"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.3.4"
+  }
+}
